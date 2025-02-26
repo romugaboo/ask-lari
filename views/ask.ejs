@@ -1,0 +1,37 @@
+<%- include('partials/header') %>
+
+    <body>
+        <%- include('partials/navbar') %>
+            <div class="container py-4 container-width">
+                <form method="POST" action="/save-question"> <!-- Single form wrapping all elements -->
+                    <div class="card rounded-5 border-0 shadow-sm mb-4">
+                        <div class="card-header rounded-5">
+                            <h3 class="text-center mt-2">Título</h3>
+                        </div>
+                        <div class="card-body">
+                            <input type="text" name="title" id="title" class="form-control border-0 rounded-5 w-100"
+                                placeholder="Título" required>
+                        </div>
+                    </div>
+
+                    <div class="card rounded-5 border-0 shadow-sm mb-2">
+                        <div class="card-header rounded-5">
+                            <h3 class="text-center mt-2">Descrição</h3>
+                        </div>
+                        <div class="card-body p-0">
+                            <textarea class="form-control border-0 rounded-5 p-3 w-100" name="description"
+                                id="description" rows="8" placeholder="Descreva sua pergunta aqui..."
+                                required></textarea>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-end">
+                        <button type="submit"
+                            class="btn btn-primary mt-3 gap-2 rounded-pill justify-content-between w-auto ms-auto d-flex">
+                            <i class="bi bi-question-circle-fill"></i>
+                            Perguntar
+                        </button>
+                    </div>
+                </form>
+            </div>
+    </body>
